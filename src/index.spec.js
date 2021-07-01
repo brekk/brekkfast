@@ -1,4 +1,4 @@
-import Mersy from "./index"
+import Unusual from "./index"
 
 const SEEDS = {
   ONE: "one",
@@ -11,12 +11,12 @@ const alphaObj = []
   .reduce((agg, [c, i]) => Object.assign({}, agg, { [c]: i }))
 
 function testWithSeed(seed) {
-  describe("Mersy", () => {
+  describe("Unusual", () => {
     let M1
     let M2
     beforeAll(() => {
-      M1 = new Mersy(seed)
-      M2 = new Mersy(seed)
+      M1 = new Unusual(seed)
+      M2 = new Unusual(seed)
     })
     test("integer", () => {
       const range = { min: -500, max: 500 }
@@ -44,6 +44,35 @@ function testWithSeed(seed) {
     test("pickValue", () => {
       const x = M1.pickValue(alphaObj)
       const y = M2.pickValue(alphaObj)
+      expect(x).not.toEqual(y)
+      expect(x).toMatchSnapshot()
+      expect(y).toMatchSnapshot()
+    })
+    test("random", () => {
+      const x = M1.random()
+      const y = M2.random()
+      expect(x).not.toEqual(y)
+      expect(x).toMatchSnapshot()
+      expect(y).toMatchSnapshot()
+    })
+    test("floor", () => {
+      const x = M1.floor(100)
+      const y = M2.floor(100)
+      expect(x).not.toEqual(y)
+      expect(x).toMatchSnapshot()
+      expect(y).toMatchSnapshot()
+    })
+    test("floorMin", () => {
+      const x = M1.floorMin(1, 100)
+      const y = M2.floorMin(1, 100)
+      expect(x).not.toEqual(y)
+      expect(x).toMatchSnapshot()
+      expect(y).toMatchSnapshot()
+    })
+
+    test("shuffle", () => {
+      const x = M1.shuffle(alphabet)
+      const y = M1.shuffle(alphabet)
       expect(x).not.toEqual(y)
       expect(x).toMatchSnapshot()
       expect(y).toMatchSnapshot()

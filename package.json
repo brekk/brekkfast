@@ -18,15 +18,15 @@
     "prettier-eslint": "^12.0.0",
     "rollup": "^2.45.2"
   },
-  "name": "mersy",
+  "name": "unusual",
   "version": "0.0.0",
   "description": "simple idempotent randomness",
-  "main": "mersy.js",
-  "repository": "https://github.com/brekk/mersy",
+  "main": "unusual.js",
+  "repository": "https://github.com/brekk/unusual",
   "author": "Brekk <brekk@brekkbockrath.com>",
   "license": "ISC",
   "dependencies": {
     "envtrace": "^0.0.2",
-    "fast-mersenne-twister": "^1.0.3"
+    "ramda": "^0.27.1"
   }
 }

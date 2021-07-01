@@ -1,12 +1,13 @@
 // import Twister from "./twister"
+import { curry } from "ramda"
 import Twister from "./fast-twister"
 import { trace } from "./utils"
 import { ERRORS, throwOnInvalidInteger } from "./errors"
 
-function Mersy(seed = null) {
-  if (!(this instanceof Mersy)) {
+function Unusual(seed = null) {
+  if (!(this instanceof Unusual)) {
     // eslint-disable-next-line no-unused-vars
-    return new Mersy(seed)
+    return new Unusual(seed)
   }
   this.seed = 0
   if (typeof seed === "string") {
@@ -21,9 +22,7 @@ function Mersy(seed = null) {
   }
   trace.constructor("seed", this.seed)
   const twister = new Twister(this.seed)
-  function random() {
-    return twister.random()
-  }
+  const random = twister.random
 
   function integer({ min, max }) {
     trace.integer("input", { min, max })
@@ -54,12 +53,33 @@ function Mersy(seed = null) {
     const key = pickKey(obj)
     return obj[key]
   }
+  function floor(x) {
+    return Math.floor(random() * x)
+  }
+  function floorMin(min, x) {
+    return floor(x) + min
+  }
+  function shuffle(list) {
+    const copy = [].concat(list)
+    let start = copy.length
+    while (start-- > 0) {
+      const index = floor(start + 1)
+      const a = copy[index]
+      const b = copy[start]
+      copy[index] = b
+      copy[start] = a
+    }
+    return copy
+  }
   this.random = random
   this.integer = integer
   this.pick = pick
   this.pickKey = pickKey
   this.pickValue = pickValue
+  this.floor = floor
+  this.floorMin = curry(floorMin)
+  this.shuffle = shuffle
   return this
 }
 
-module.exports = Mersy
+module.exports = Unusual

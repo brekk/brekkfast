@@ -1,29 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Mersy integer 1`] = `167`;
+exports[`Unusual floor 1`] = `97`;
 
-exports[`Mersy integer 2`] = `49`;
+exports[`Unusual floor 2`] = `39`;
 
-exports[`Mersy pick 1`] = `"o"`;
+exports[`Unusual floor 3`] = `54`;
 
-exports[`Mersy pick 2`] = `"p"`;
+exports[`Unusual floor 4`] = `85`;
 
-exports[`Mersy pick 3`] = `"t"`;
+exports[`Unusual floorMin 1`] = `33`;
 
-exports[`Mersy pick 4`] = `"q"`;
+exports[`Unusual floorMin 2`] = `98`;
 
-exports[`Mersy pickKey 1`] = `"l"`;
+exports[`Unusual floorMin 3`] = `85`;
 
-exports[`Mersy pickKey 2`] = `"n"`;
+exports[`Unusual floorMin 4`] = `55`;
 
-exports[`Mersy pickKey 3`] = `"w"`;
+exports[`Unusual integer 1`] = `167`;
 
-exports[`Mersy pickKey 4`] = `"t"`;
+exports[`Unusual integer 2`] = `49`;
 
-exports[`Mersy pickValue 1`] = `0`;
+exports[`Unusual pick 1`] = `"n"`;
 
-exports[`Mersy pickValue 2`] = `11`;
+exports[`Unusual pick 2`] = `"o"`;
 
-exports[`Mersy pickValue 3`] = `15`;
+exports[`Unusual pick 3`] = `"s"`;
 
-exports[`Mersy pickValue 4`] = `22`;
+exports[`Unusual pick 4`] = `"p"`;
+
+exports[`Unusual pickKey 1`] = `"k"`;
+
+exports[`Unusual pickKey 2`] = `"n"`;
+
+exports[`Unusual pickKey 3`] = `"v"`;
+
+exports[`Unusual pickKey 4`] = `"s"`;
+
+exports[`Unusual pickValue 1`] = `0`;
+
+exports[`Unusual pickValue 2`] = `10`;
+
+exports[`Unusual pickValue 3`] = `15`;
+
+exports[`Unusual pickValue 4`] = `21`;
+
+exports[`Unusual random 1`] = `0.39104464114643633`;
+
+exports[`Unusual random 2`] = `0.06717233126983047`;
+
+exports[`Unusual random 3`] = `0.8579456198494881`;
+
+exports[`Unusual random 4`] = `0.6027633703779429`;
+
+exports[`Unusual shuffle 1`] = `
+Array [
+  "p",
+  "b",
+  "j",
+  "k",
+  "x",
+  "z",
+  "s",
+  "e",
+  "o",
+  "m",
+  "u",
+  "v",
+  "n",
+  "l",
+  "a",
+  "y",
+  "w",
+  "d",
+  "c",
+  "i",
+  "g",
+  "f",
+  "r",
+  "t",
+  "h",
+  "q",
+]
+`;
+
+exports[`Unusual shuffle 2`] = `
+Array [
+  "x",
+  "r",
+  "v",
+  "z",
+  "c",
+  "s",
+  "i",
+  "o",
+  "g",
+  "y",
+  "q",
+  "t",
+  "e",
+  "d",
+  "b",
+  "k",
+  "l",
+  "j",
+  "p",
+  "m",
+  "a",
+  "w",
+  "n",
+  "h",
+  "f",
+  "u",
+]
+`;
+
+exports[`Unusual shuffle 3`] = `
+Array [
+  "c",
+  "w",
+  "q",
+  "n",
+  "s",
+  "a",
+  "v",
+  "o",
+  "d",
+  "m",
+  "f",
+  "x",
+  "k",
+  "z",
+  "h",
+  "u",
+  "e",
+  "t",
+  "b",
+  "r",
+  "g",
+  "j",
+  "i",
+  "y",
+  "p",
+  "l",
+]
+`;
+
+exports[`Unusual shuffle 4`] = `
+Array [
+  "q",
+  "e",
+  "a",
+  "c",
+  "j",
+  "m",
+  "w",
+  "l",
+  "f",
+  "g",
+  "r",
+  "b",
+  "u",
+  "k",
+  "p",
+  "h",
+  "n",
+  "o",
+  "i",
+  "z",
+  "y",
+  "t",
+  "d",
+  "s",
+  "x",
+  "v",
+]
+`;
