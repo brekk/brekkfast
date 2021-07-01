@@ -1,5 +1,0 @@
-extends: sorcerers
-rules:
-  arrow-parens:
-  - error
-  - as-needed
