@@ -1,0 +1,7 @@
+const MAX_INT = 9007199254740992
+const CONSTANTS = {
+  MAX_INT,
+  MIN_INT: MAX_INT * -1,
+}
+
+export default CONSTANTS

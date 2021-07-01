@@ -1,3 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`brekkfast 1`] = `"I am brekkfast, hear me roar"`;
+exports[`Mersy integer 1`] = `167`;
+
+exports[`Mersy integer 2`] = `49`;
+
+exports[`Mersy pick 1`] = `"o"`;
+
+exports[`Mersy pick 2`] = `"p"`;
+
+exports[`Mersy pick 3`] = `"t"`;
+
+exports[`Mersy pick 4`] = `"q"`;
+
+exports[`Mersy pickKey 1`] = `"l"`;
+
+exports[`Mersy pickKey 2`] = `"n"`;
+
+exports[`Mersy pickKey 3`] = `"w"`;
+
+exports[`Mersy pickKey 4`] = `"t"`;
+
+exports[`Mersy pickValue 1`] = `0`;
+
+exports[`Mersy pickValue 2`] = `11`;
+
+exports[`Mersy pickValue 3`] = `15`;
+
+exports[`Mersy pickValue 4`] = `22`;
