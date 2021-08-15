@@ -24,7 +24,8 @@ const ejectables = {
     }
   },
   replace: {
-    script: `nps eject.replace.pkg eject.replace.index`,
+    script: `nps eject.replace.readme eject.replace.pkg eject.replace.index`,
+    readme: replace('README.md'),
     pkg: replace('package.json'),
     index: replace('src/index.js')
   },

@@ -1,7 +1,7 @@
 const raw = { yes: true };
 const other = { ...raw, cool: 'very' };
 
-const BREKKFAST = () =>
+const brekkfast = () =>
   `I am brekkfast, hear me roar ${JSON.stringify(other)}`;
 
-export { BREKKFAST as default };
+export { brekkfast as default };
