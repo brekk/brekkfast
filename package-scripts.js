@@ -53,7 +53,7 @@ const EXPORTS = {
 }
 
 const reprint = () =>
-  `echo "module.exports = ${JSON.stringify(
+  `echo 'module.exports = ${JSON.stringify(
     {
       scripts: Object.assign({}, EXPORTS.scripts, {
         eject: undefined
@@ -61,7 +61,7 @@ const reprint = () =>
     },
     null,
     2
-  )}" > package-scripts.js`
+  )}' > package-scripts.js`
 
 ejectables.reprint = reprint()
 
