@@ -4,9 +4,8 @@ import json from '@rollup/plugin-json'
 // import shebang from 'rollup-plugin-add-shebang'
 import pkg from './package.json'
 
-const external = (pkg && pkg.dependencies
-  ? Object.keys(pkg.dependencies)
-  : []
+const external = (
+  pkg && pkg.dependencies ? Object.keys(pkg.dependencies) : []
 ).concat([`path`])
 
 const plugins = [
@@ -15,11 +14,23 @@ const plugins = [
   commonjs()
 ]
 
-export default [
+const build = (input, name) => [
   {
-    input: `src/index.js`,
+    input,
     external,
-    output: [{ file: pkg.main, format: `cjs` }],
-    plugins: plugins
+    output: [
+      { name, file: name + '.js', format: 'cjs', exports: 'auto' },
+      { name, file: name + '.mjs', format: 'esm' }
+    ],
+    plugins
+  },
+  {
+    input,
+    output: [{ name, file: name + '.umd.js', format: 'umd' }],
+    plugins
   }
 ]
+
+const toBuild = [...build(`src/index.js`, pkg.name)]
+
+export default toBuild

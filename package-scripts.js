@@ -1,6 +1,6 @@
 module.exports = {
   scripts: {
-    lint: `eslint src/*.js`,
+    lint: `eslint . --fix`,
     rollup: `rollup -c rollup.config.js`,
     build: `nps rollup`,
     bundle: `nps build`,
@@ -10,6 +10,6 @@ module.exports = {
       snapshot: 'nps "test -u"',
       coverage: 'nps "test --coverage"'
     },
-    care: "nps lint test bundle"
+    care: 'nps lint test bundle'
   }
 }

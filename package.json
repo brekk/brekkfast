@@ -12,6 +12,8 @@
     "@rollup/plugin-node-resolve": "^11.2.1",
     "eslint": "^7.24.0",
     "eslint-config-sorcerers": "^0.0.7",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "nps": "^5.10.0",
     "prettier": "^2.2.1",
     "prettier-eslint": "^12.0.0",
@@ -24,5 +26,18 @@
   "repository": "https://github.com/brekk/brekkfast",
   "author": "Brekk <brekk@brekkbockrath.com>",
   "license": "ISC",
-  "private": false
+  "private": false,
+  "dependencies": {},
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "files": [
+    "brekkfast.js",
+    "brekkfast.mjs",
+    "brekkfast.umd.js"
+  ]
 }

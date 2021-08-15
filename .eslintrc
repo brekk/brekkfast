@@ -1,3 +1,7 @@
+ignorePatterns:
+- brekkfast.js
+- brekkfast.mjs
+- brekkfast.umd.js
 extends: sorcerers
 rules:
   no-unused-vars:

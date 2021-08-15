@@ -1,5 +1,9 @@
-'use strict';
+'use strict'
 
-const BREKKFAST = () => `I am brekkfast, hear me roar`;
+const raw = { yes: true }
+const other = { ...raw, cool: 'very' }
 
-module.exports = BREKKFAST;
+const BREKKFAST = () =>
+  `I am brekkfast, hear me roar ${JSON.stringify(other)}`
+
+module.exports = BREKKFAST
