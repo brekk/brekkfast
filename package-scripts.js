@@ -10,6 +10,7 @@ module.exports = {
       snapshot: 'nps "test -u"',
       coverage: 'nps "test --coverage"'
     },
-    care: 'nps lint test bundle'
+    care: 'nps lint test bundle',
+    precommit: 'nps test bundle'
   }
 }
